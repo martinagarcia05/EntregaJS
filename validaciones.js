@@ -1,17 +1,20 @@
-$("#formulario").submit(function(event){
-    event.preventDefault();
-    let nom = $("#nombre").val();
-    let ap1 = $("#apellido1").val();
-    let ap2 = $("#apellido2").val();
-    if(nom.trim() === ""){
-        alert("ingrese su nombre");
-        event.preventDefault();
-        return;
+function () {
+  const formulario = document.getElementById("formulario");
+
+    const nom = document.getElementById("nombre").value.trim();
+    const ap1 = document.getElementById("apellido1").value.trim();
+    const ap2 = document.getElementById("apellido2").value.trim(); 
+
+    if (nom === "") {
+      alert("Ingrese su nombre");
+      return;
     }
-    if(ap1.trim() === ""){
-        alert("ingrese su apellido");
-        event.preventDefault();
-        return;
+
+    if (ap1 === "") {
+      alert("Ingrese su apellido");
+      return;
     }
+
     alert("Formulario válido. (pero no se envía)");
-})
+  });
+}
